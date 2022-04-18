@@ -1,9 +1,11 @@
-export class GameStructure{
+class GameStructure{
     name;
     life;
     mana;
+    strenght;
     defense;
     _class;
+    
 
     get name(){
         return this.name;
@@ -14,6 +16,9 @@ export class GameStructure{
     get mana(){
         return this.mana;
     }
+    get strenght(){
+        return this.strenght;
+    }
     get defense(){
         return this.defense;
     }
@@ -21,10 +26,11 @@ export class GameStructure{
         return this._class;
     }
     
-    constructor(name,life,mana,defense,_class){
+    constructor(name,life,mana,strenght,defense,_class){
         this.name = name;
         this.life = life;
         this.mana = mana;
+        this.strenght = strenght;
         this.defense = defense;
         this._class = _class;
     };
@@ -75,3 +81,5 @@ export class GameStructure{
         console.log(`Dano de ${chaoticWindsDamage} em ${target}`);
     }
 }
+
+module.exports = GameStructure
